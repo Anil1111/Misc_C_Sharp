@@ -10,7 +10,7 @@ namespace Misc_C_Sharp
 {
     public class Program
     {
-        enum Styles { Plaid = 0, Striped = 23, Tartan = 65, Corduroy = 78 };
+        
         static void Main(string[] args)
         {
             //DelegatesDemo d = new DelegatesDemo();
@@ -29,8 +29,18 @@ namespace Misc_C_Sharp
             //Console.WriteLine(FileUploadString.UploadFilesToRemoteUrl("http://localhost", new string[] { "D:\\Personal Data\\alizaib.pdf" }, formFields));
 
             //var convertersDemo = new ConvertersDemo();
-            var securityDemo = new SecurityDemo();
+            //var securityDemo = new SecurityDemo();
+            //var asyncAwaitDemo = new AsyncAwaitDemo();
+            //{
+            //    var dDemo = new DestructorDemo();
+            //}
+            //Console.WriteLine("Out of scope, By now destructor should have been called");
+            //Console.WriteLine("It is not been called yet, and it wouldn't untill the next key press get executed");
+            //Console.ReadKey();
+            //using (var ido = new IDisposableDemo())
+            //{
 
+            //}
         }
 
         
