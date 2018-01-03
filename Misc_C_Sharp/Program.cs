@@ -9,9 +9,41 @@ using System.Collections.Specialized;
 namespace Misc_C_Sharp
 {
     public class Program
-    {
-        
+    {        
         static void Main(string[] args)
+        {
+            //CheckedDemo();
+            //UnSafeDemo();
+            int a = -1;
+            uint b = (uint)a;
+            Console.WriteLine(b);
+        }
+
+        unsafe static void UnSafeDemo()
+        {
+            byte aByte = 8;
+            byte* pByte = &aByte;
+            double* pDouble = (double*)pByte;
+            Console.WriteLine(*pDouble);
+            Console.WriteLine(*pByte);
+        }
+
+        private static void CheckedDemo()
+        {
+            try
+            {
+                int ten = 10;
+                int i2 = checked(2147483647 + ten);
+                Console.WriteLine(i2);
+            }
+            catch (System.OverflowException e)
+            {
+                Console.WriteLine($"Checked and Caught {e.ToString()}");
+
+            }
+        }
+
+        static void OldDemo()
         {
             //DelegatesDemo d = new DelegatesDemo();
             //ParallelClassDemo d = new ParallelClassDemo();
@@ -42,7 +74,6 @@ namespace Misc_C_Sharp
 
             //}
         }
-
         
     }
 
