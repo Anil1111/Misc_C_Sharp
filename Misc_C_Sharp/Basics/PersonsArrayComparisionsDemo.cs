@@ -32,6 +32,7 @@ namespace Misc_C_Sharp.Basics
                 Console.WriteLine("not the same reference");
             if ((persons1 as IStructuralEquatable).Equals(persons2, EqualityComparer<Person>.Default))
                 Console.WriteLine("arrays are the same");
+            //Some comments
         }
     }
     public class Person: IEquatable<Person>
