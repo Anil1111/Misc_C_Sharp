@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Misc_C_Sharp.TestInterfaces;
 using System.Collections.Specialized;
+using Misc_C_Sharp.Basics;
 
 namespace Misc_C_Sharp
 {
@@ -14,9 +15,10 @@ namespace Misc_C_Sharp
         {
             //CheckedDemo();
             //UnSafeDemo();
-            int a = -1;
-            uint b = (uint)a;
-            Console.WriteLine(b);
+            //int a = -1;
+            //uint b = (uint)a;
+            //Console.WriteLine(b);
+            var demo = new PersonsArrayComparisionsDemo();
         }
 
         unsafe static void UnSafeDemo()

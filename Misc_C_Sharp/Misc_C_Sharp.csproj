@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basics\PersonsArrayComparisionsDemo.cs" />
     <Compile Include="OldMixed\AsyncAwaitDemo.cs" />
     <Compile Include="OldMixed\ConvertersDemo.cs" />
     <Compile Include="OldMixed\DelegatesDemo.cs" />
