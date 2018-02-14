@@ -13,13 +13,14 @@ namespace Misc_C_Sharp
     {        
         static void Main(string[] args)
         {
-            OldDemo();
+            //OldDemo();
             //CheckedDemo();
             //UnSafeDemo();
             //int a = -1;
             //uint b = (uint)a;
             //Console.WriteLine(b);
             //var demo = new PersonsArrayComparisionsDemo();
+            var demo = new LINQQueries();
         }
 
         unsafe static void UnSafeDemo()
@@ -54,7 +55,7 @@ namespace Misc_C_Sharp
 
             //ITestA obj = new TestA();
             //obj.TestB();
-            //LINQDemo demo = new LINQDemo();
+            LINQDemo demo = new LINQDemo();
 
             //var tartan = "Tartan";
             //int value = (int)Enum.Parse(typeof(Styles), tartan);
@@ -63,7 +64,7 @@ namespace Misc_C_Sharp
             //formFields.Add("username", "ali");
             //Console.WriteLine(FileUploadString.UploadFilesToRemoteUrl("http://localhost", new string[] { "D:\\Personal Data\\alizaib.pdf" }, formFields));
 
-            var convertersDemo = new ConvertersDemo();
+            //var convertersDemo = new ConvertersDemo();
             //var securityDemo = new SecurityDemo();
             //var asyncAwaitDemo = new AsyncAwaitDemo();
             //{
