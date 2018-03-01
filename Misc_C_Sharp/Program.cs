@@ -20,7 +20,10 @@ namespace Misc_C_Sharp
             //uint b = (uint)a;
             //Console.WriteLine(b);
             //var demo = new PersonsArrayComparisionsDemo();
-            var demo = new LINQQueries();
+            //var demo = new LINQQueries();
+            //var demo = new DLRDemo();
+            var demo = new FlatToHierarchiDemo();
+            Console.ReadKey();
         }
 
         unsafe static void UnSafeDemo()
@@ -55,7 +58,7 @@ namespace Misc_C_Sharp
 
             //ITestA obj = new TestA();
             //obj.TestB();
-            LINQDemo demo = new LINQDemo();
+            //LINQDemo demo = new LINQDemo();
 
             //var tartan = "Tartan";
             //int value = (int)Enum.Parse(typeof(Styles), tartan);

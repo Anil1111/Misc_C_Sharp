@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basics\DLRDemo.cs" />
+    <Compile Include="Basics\FlatToHierarchiDemo.cs" />
     <Compile Include="Basics\GenericClassIssues.cs" />
     <Compile Include="Basics\LINQQueries.cs" />
     <Compile Include="Basics\PersonsArrayComparisionsDemo.cs" />
