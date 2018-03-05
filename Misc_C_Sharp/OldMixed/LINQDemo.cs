@@ -22,6 +22,17 @@ namespace Misc_C_Sharp
             //    Console.WriteLine("{0:A}", item);
             //}
 
+            //Select Many
+            //var drivers = from r in Formula1.GetChampions()
+            //              from c in r.Cars
+            //                  //where c == "Ferrari"
+            //              orderby r.FirstName
+            //              select r.FirstName + " " + r.LastName + " : " + c;
+            //foreach (var item in drivers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             //group by countery show country: count
             //var query = from r in Formula1.GetChampions()
             //            group r by r.Country into g
@@ -106,28 +117,35 @@ namespace Misc_C_Sharp
             //}
 
             // Left Join
-            //var racers = from r in Formula1.GetChampions()
-            //             from y in r.Years
-            //             select new { Year = y, Name = r.FirstName + ", " + r.LastName };
-            //var teams = from t in Formula1.GetContructorChampions()
-            //            from y in t.Years
-            //            select new { Year = y, Name = t.Name };
-            //var racerAndTeams = (from r in racers
-            //                     join t in teams on r.Year equals t.Year into rt
-            //                     from t in rt.DefaultIfEmpty()
-            //                     select new { Year = r.Year, Champion = r.Name, Team = t==null? "No constructor" : t.Name }).Take(10);
-            //Console.WriteLine("Year World Champion\t Constructur Title");
-            //foreach (var item in racerAndTeams)
+            var racers = from r in Formula1.GetChampions()
+                         from y in r.Years
+                         select new { Year = y, Name = r.FirstName + ", " + r.LastName };
+            var teams = from t in Formula1.GetContructorChampions()
+                        from y in t.Years
+                        select new { Year = y, Name = t.Name };
+            var racerAndTeams = (from r in racers
+                                 join t in teams on r.Year equals t.Year into rt
+                                 from t in rt.DefaultIfEmpty()
+                                 select new {
+                                     Year = r.Year,
+                                     Champion = r.Name,
+                                     Team = t == null ? "No constructor" : t.Name
+                                 }).Take(10);
+            Console.WriteLine("Year World Champion\t Constructur Title");
+            foreach (var item in racerAndTeams)
+            {
+                Console.WriteLine("{0} {1,-20} {2}", item.Year, item.Champion, item.Team);
+            }
+
+            //var racer = Formula1.GetChampions().FirstOrDefault();
+            //PropertyInfo[] propInfo = racer.GetType().GetProperties();
+            //foreach (var pi in propInfo)
             //{
-            //    Console.WriteLine("{0} {1,-20} {2}", item.Year, item.Champion, item.Team);
+            //    Console.WriteLine("{0}: {1}", pi.Name, pi.GetValue(racer, null));
             //}
 
-            var racer = Formula1.GetChampions().FirstOrDefault();
-            PropertyInfo[] propInfo = racer.GetType().GetProperties();
-            foreach (var pi in propInfo)
-            {
-                Console.WriteLine("{0}: {1}", pi.Name, pi.GetValue(racer, null));
-            }
+
+
 
         }
     }

@@ -13,12 +13,17 @@ namespace Misc_C_Sharp
     {        
         static void Main(string[] args)
         {
+            //OldDemo();
             //CheckedDemo();
             //UnSafeDemo();
             //int a = -1;
             //uint b = (uint)a;
             //Console.WriteLine(b);
-            var demo = new PersonsArrayComparisionsDemo();
+            //var demo = new PersonsArrayComparisionsDemo();
+            //var demo = new LINQQueries();
+            //var demo = new DLRDemo();
+            var demo = new FlatToHierarchiDemo();
+            Console.ReadKey();
         }
 
         unsafe static void UnSafeDemo()
