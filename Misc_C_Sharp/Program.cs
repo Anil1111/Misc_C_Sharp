@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Misc_C_Sharp.TestInterfaces;
 using System.Collections.Specialized;
 using Misc_C_Sharp.Basics;
+using Misc_C_Sharp.ProCSharpBook;
 
 namespace Misc_C_Sharp
 {
@@ -22,7 +23,8 @@ namespace Misc_C_Sharp
             //var demo = new PersonsArrayComparisionsDemo();
             //var demo = new LINQQueries();
             //var demo = new DLRDemo();
-            var demo = new FlatToHierarchiDemo();
+            //var demo = new FlatToHierarchiDemo();
+            var demo = new ADODemo();
             Console.ReadKey();
         }
 
