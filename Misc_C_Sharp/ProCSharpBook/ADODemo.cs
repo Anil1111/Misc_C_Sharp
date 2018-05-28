@@ -19,6 +19,7 @@ namespace Misc_C_Sharp.ProCSharpBook
 
         private void ReadConnectionFromConfig()
         {
+            //Manual method
             string name = "default";
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[name];
             DbProviderFactory factory = DbProviderFactories.GetFactory(settings.ProviderName);
