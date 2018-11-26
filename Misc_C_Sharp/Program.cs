@@ -24,7 +24,8 @@ namespace Misc_C_Sharp
             //var demo = new LINQQueries();
             //var demo = new DLRDemo();
             //var demo = new FlatToHierarchiDemo();
-            var demo = new ADODemo();
+            //var demo = new ADODemo();
+            Console.WriteLine((-8 >> 1));
             Console.ReadKey();
         }
 
